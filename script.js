@@ -1,0 +1,42 @@
+const quizzData = [
+  {
+    question: "First United States President?",
+    a: "Abraham Lincoln",
+    b: "John Adams",
+    c: "George Washington",
+    d: "Bill Clinton",
+    correct: "c",
+  },
+  {
+    question: "What does https stand for?",
+    a: "Hyper Text Terminal Pattern Softwares",
+    b: "Have Ton Terminated Padded Soldiers",
+    c: "How To Take Pictures Standing",
+    d: "Hypertext Transfter Protocal Secure",
+    correct: "d",
+  },
+  {
+    question: "What is the most spoken language in the world currently?",
+    a: "English",
+    b: "Spanish",
+    c: "Chinese (Mandarin)",
+    d: "Hindi",
+    correct: "a",
+  },
+  {
+    question: "Which one of these is a dwarf planet?",
+    a: "Pluto",
+    b: "Neptune",
+    c: "Earth",
+    d: "Saturn",
+    correct: "a",
+  },
+  {
+    question: "What does HTML stand for?",
+    a: "How to make lemonade",
+    b: "Hyper Text Markup Language",
+    c: "Hypertext Management Location",
+    d: "Java Development Docs",
+    correct: "b",
+  },
+];
