@@ -77,5 +77,11 @@ function loadQuiz() {
 submitBtn.addEventListener("click", () => {
   currentQuiz++;
 
-  loadQuiz();
+  // If currentQuiz is less than the quizData length show alert
+  // Show results of the test with total correct answers
+  if (currentQuiz < quizData.length) {
+    loadQuiz();
+  } else {
+    alert("Quiz is finished!");
+  }
 });
