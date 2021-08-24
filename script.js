@@ -24,7 +24,7 @@ const quizzData = [
     correct: "a",
   },
   {
-    question: "Which one of these is a dwarf planet?",
+    question: "Which one of these is the smallest planet?",
     a: "Pluto",
     b: "Neptune",
     c: "Earth",
@@ -38,5 +38,13 @@ const quizzData = [
     c: "Hypertext Management Location",
     d: "Java Development Docs",
     correct: "b",
+  },
+  {
+    question: "What does CSS stand for?",
+    a: "Creative System Security",
+    b: "Concurrent Symantec Software",
+    c: "Cascading Style Sheet",
+    d: "Consecutive Storage Shortage",
+    correct: "c",
   },
 ];
