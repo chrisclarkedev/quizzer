@@ -1,4 +1,4 @@
-const quizzData = [
+const quizData = [
   {
     question: "First United States President?",
     a: "Abraham Lincoln",
@@ -48,3 +48,34 @@ const quizzData = [
     correct: "c",
   },
 ];
+
+// All text to be targeted
+const questionEl = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const submitBtn = document.getElementById("submit");
+
+// Keep track of current question
+let currentQuiz = 0;
+
+// Load the actual Quiz (function)
+loadQuiz();
+
+function loadQuiz() {
+  const currentQuizData = quizData[currentQuiz];
+
+  questionEl.innerText = currentQuizData.question;
+
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;
+}
+
+submitBtn.addEventListener("click", () => {
+  currentQuiz++;
+
+  loadQuiz();
+});

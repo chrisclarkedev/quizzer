@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -20,10 +20,17 @@ body {
   box-shadow: 0 0 10px 5px rgba(100, 100, 100, 0.2);
   width: 600px;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .quiz-header {
   padding: 4rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
 ul {
@@ -31,13 +38,23 @@ ul {
   padding: 0;
 }
 
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
 button {
-  background-color: #e67e22;
+  background-color: #459dd8;
   color: white;
   display: block;
   width: 100%;
-  padding: 2rem;
+  padding: 1.2rem;
   font-family: inherit;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d83c7;
 }
