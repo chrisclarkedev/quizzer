@@ -49,9 +49,12 @@ const quizData = [
   },
 ];
 
-// All text to be targeted
+//
+const quiz = document.getElementById("quiz");
+// .answer and question are both radio buttons
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
+// All text to be targeted
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
@@ -94,7 +97,7 @@ function getSelected() {
   return answer;
 }
 
-// Adding deselector after answer is submitted
+// Adding deselection of choices after answer is submitted
 function deselectAns() {
   answerEls.forEach((answerEl) => {
     answerEl.checked = false;
@@ -105,19 +108,19 @@ submitBtn.addEventListener("click", () => {
   //check to see if the answer is there
   const answer = getSelected();
   console.log(answer);
-  // Check if we have correct answer
+  // Check if we have correct answer then add to score
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       score++;
     }
+
     currentQuiz++;
     if (currentQuiz < quizData.length) {
       loadQuiz();
     } else {
-      alert("Quiz is finished!");
+      // Once all questions are answered display score out of total questions answered
+      // Button at the bottom of results page will restart test
+      quiz.innerHTML = `<h2> Your score is ${score}/${quizData.length}</h2><button onclick="location.reload()">Retry Test</button>`;
     }
   }
-
-  // If currentQuiz is less than the quizData length show alert
-  // Show results of the test with total correct answers
 });
