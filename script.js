@@ -60,6 +60,12 @@ const submitBtn = document.getElementById("submit");
 // Keep track of current question
 let currentQuiz = 0;
 
+// Keep track of the current score
+let score = 0;
+
+//Keep track of current answer
+let answer = undefined;
+
 // Load the actual Quiz (function)
 loadQuiz();
 
@@ -74,14 +80,37 @@ function loadQuiz() {
   d_text.innerText = currentQuizData.d;
 }
 
+function getSelected() {
+  const answerEls = document.querySelectorAll(".answer");
+
+  let answer = undefined;
+  // Display the answer letter when sumbitted
+  answerEls.forEach((answerEl) => {
+    if (answerEl.checked) {
+      answer = answerEl.id;
+    }
+  });
+
+  return answer;
+}
+
 submitBtn.addEventListener("click", () => {
-  currentQuiz++;
+  //check to see if the answer is there
+  const answer = getSelected();
+  console.log(answer);
+  // Check if we have correct answer
+  if (answer) {
+    if (answer === quizData[currentQuiz].correct) {
+      score++;
+    }
+    currentQuiz++;
+    if (currentQuiz < quizData.length) {
+      loadQuiz();
+    } else {
+      alert("Quiz is finished!");
+    }
+  }
 
   // If currentQuiz is less than the quizData length show alert
   // Show results of the test with total correct answers
-  if (currentQuiz < quizData.length) {
-    loadQuiz();
-  } else {
-    alert("Quiz is finished!");
-  }
 });
