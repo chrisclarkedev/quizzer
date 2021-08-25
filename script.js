@@ -50,6 +50,7 @@ const quizData = [
 ];
 
 // All text to be targeted
+const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
@@ -70,6 +71,7 @@ let answer = undefined;
 loadQuiz();
 
 function loadQuiz() {
+  deselectAns();
   const currentQuizData = quizData[currentQuiz];
 
   questionEl.innerText = currentQuizData.question;
@@ -81,8 +83,6 @@ function loadQuiz() {
 }
 
 function getSelected() {
-  const answerEls = document.querySelectorAll(".answer");
-
   let answer = undefined;
   // Display the answer letter when sumbitted
   answerEls.forEach((answerEl) => {
@@ -92,6 +92,13 @@ function getSelected() {
   });
 
   return answer;
+}
+
+// Adding deselector after answer is submitted
+function deselectAns() {
+  answerEls.forEach((answerEl) => {
+    answerEl.checked = false;
+  });
 }
 
 submitBtn.addEventListener("click", () => {
