@@ -120,7 +120,9 @@ submitBtn.addEventListener("click", () => {
     } else {
       // Once all questions are answered display score out of total questions answered
       // Button at the bottom of results page will restart test
-      quiz.innerHTML = `<h2> Your score is ${score}/${quizData.length}</h2><button onclick="location.reload()">Retry Test</button>`;
+      quiz.innerHTML = `<h2> Your score is ${score}/${quizData.length}</h2>
+      
+      <button onclick="location.reload()">Retry Test</button>`;
     }
   }
 });
