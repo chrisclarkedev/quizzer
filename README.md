@@ -1,1 +1,1 @@
-## Quizzer App
+## Quizzer
