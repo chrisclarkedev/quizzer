@@ -47,6 +47,38 @@ const quizData = [
     d: "Consecutive Storage Shortage",
     correct: "c",
   },
+  {
+    question: "Which HTML element prepresents a paragraph",
+    a: "<para></para>",
+    b: "<p></p>",
+    c: "<par></par>",
+    d: "<paragraph></paragraph>",
+    correct: "b",
+  },
+  {
+    question: "DOM is short for what term?",
+    a: "Download Our Message",
+    b: "Direct Object Manipulation",
+    c: "Dont Ommit Modules",
+    d: "Document Object Model",
+    correct: "d",
+  },
+  {
+    question: "Javascript Arrays are used to do what?",
+    a: "To store multiple values in a single variable",
+    b: "Count the number of objects in a variable",
+    c: "Add another value to a variable",
+    d: "Multiply all the objects in a variable",
+    correct: "c",
+  },
+  {
+    question: "HTTP is short for what term?",
+    a: "Hyper Text Transfer Protocol",
+    b: "Hyper Text Transfer Protocols",
+    c: "How To Type Paragraphs",
+    d: "Here To Transfer Percentages",
+    correct: "b",
+  },
 ];
 
 //
