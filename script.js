@@ -72,11 +72,11 @@ const quizData = [
     correct: "c",
   },
   {
-    question: "HTTP is short for what term?",
-    a: "Hyper Text Transfer Protocol",
-    b: "Hyper Text Transfer Protocols",
-    c: "How To Type Paragraphs",
-    d: "Here To Transfer Percentages",
+    question: "<h1> is used to define what",
+    a: "Hyper Text Transfer Protocols",
+    b: "HTML headings",
+    c: "Paragraphs",
+    d: "Number Values",
     correct: "b",
   },
 ];
